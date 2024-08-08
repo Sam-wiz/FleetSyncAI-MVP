@@ -1,0 +1,52 @@
+/* Auth.css */
+
+.auth-container {
+    position: relative;
+    height: 90vh;
+    width: 98vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.button-container {
+    z-index: 2; /* Ensure buttons are above the particles */
+    display: flex;
+    gap: 120px;
+    position: absolute;
+    
+    justify-content: center;
+    width: 100%;
+}
+
+.btn {
+    padding: 10px 50px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    height: 50px;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #007bff, #00d2ff);
+
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: #00bfae;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+}

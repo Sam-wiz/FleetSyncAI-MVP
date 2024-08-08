@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import logo from '../public/truck.png'
 import { BiSolidUserAccount } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +10,8 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+
 
   return (
     <nav className={`navbar ${isOpen ? "active" : ""}`}>
@@ -20,9 +23,9 @@ const Navbar = () => {
         <li><a href="#service">Services</a></li>
         <li><a href="#contact">Contact Us</a></li>
         <li>
-  <a href="#register" style={{ fontSize: "34px" }}>
+  <Link  to="/register" style={{ fontSize: "34px" }}>
     <BiSolidUserAccount />
-  </a>
+  </Link>
 </li>
       </ul>
       <div className={`hamburger ${isOpen ? "active" : ""}`} onClick={toggleMenu}>

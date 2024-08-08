@@ -1,8 +1,17 @@
-import React from 'react';
+
 import './Services.css';
+import { useNavigate } from 'react-router-dom';
 
 
 const Services = () => {
+
+
+  const navigate = useNavigate();
+
+  const fleetmanagement = () => {
+      navigate('/dashboard');
+  };
+
   return (
     <div id='service' className="container">
       <p className="container-title">
@@ -30,7 +39,7 @@ const Services = () => {
             </svg>
             <p className="card-title">Fleet Management Dashboard</p>
             <p className="card-description">Monitor available drivers and trucks, view detailed truck information, and manage your fleet effectively with real-time updates and insights</p>
-            <button className='service-btn'>Check Now</button>
+            <button className='service-btn' onClick={fleetmanagement}>Check Now</button>
           </div>
         </div>
 
